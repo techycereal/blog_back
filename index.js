@@ -3,7 +3,7 @@ const cors = require('cors');
 const app = express();
 const { authenticateUser } = require('./middleware');
 const { admin, db } = require('./firebase');
-
+require('dotenv').config()
 app.use(cors());
 app.use(express.json());
 
@@ -287,5 +287,5 @@ app.get('/get_post/:id', async (req, res) => {
 
 const PORT = process.env.PORT || 3009
 app.listen(PORT, () => {
-  console.log('Server is running on port 3009');
+  console.log(`Server is running on port ${PORT}`);
 });
