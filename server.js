@@ -272,7 +272,7 @@ app.get('/get_post/:id', async (req, res) => {
         if (!postSnapshot.exists) {
             return res.status(404).send('No post found with this ID.');
         }
-
+ 
         // Return the post data with its ID
         const post = { id: postSnapshot.id, ...postSnapshot.data() };
 
