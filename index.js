@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const { authenticateUser } = require('./middleware');
-const { admin, db } = require('./firebase');
+const { admin, db } = require('./firebaseAdmin');
 require('dotenv').config()
 app.use(cors());
 app.use(express.json());
