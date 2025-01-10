@@ -6,7 +6,7 @@ const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_EMAIL = process.env.CLIENT_EMAIL;
 const CLIENT_CERT = process.env.CLIENT_CERT;
 const PROJECT_ID = process.env.PROJECT_ID;
-
+ 
 // Check if Firebase app is already initialized
 if (!admin.apps.length) {
   admin.initializeApp({
